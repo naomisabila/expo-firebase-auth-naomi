@@ -12,15 +12,31 @@ export default function LoginScreen({ navigation }) {
   const handleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
+      await SecureStore.setItemAsync('saved_email', email);
+      await SecureStore.setItemAsync('saved_password', password);
     } catch (e) {
       Alert.alert('Login Gagal', e.message);
     }
   };
 
   const handleBiometric = async () => {
-    const token = await SecureStore.getItemAsync('auth_token');
-    if (!token) {
+    const savedEmail = await SecureStore.getItemAsync('saved_email');
+    const savedPassword = await SecureStore.getItemAsync('saved_password');
+
+    if (!savedEmail || !savedPassword) {
       Alert.alert('Belum ada session', 'Silakan login dulu dengan password.');
+      return;
+    }
+
+    const hasHardware = await LocalAuthentication.hasHardwareAsync();
+    if (!hasHardware) {
+      Alert.alert('Tidak Didukung', 'Perangkat tidak mendukung biometric.');
+      return;
+    }
+
+    const isEnrolled = await LocalAuthentication.isEnrolledAsync();
+    if (!isEnrolled) {
+      Alert.alert('Belum Terdaftar', 'Biometric belum diaktifkan di perangkat.');
       return;
     }
 
@@ -30,7 +46,11 @@ export default function LoginScreen({ navigation }) {
     });
 
     if (result.success) {
-      Alert.alert('Berhasil', 'Welcome back!');
+      try {
+        await signInWithEmailAndPassword(auth, savedEmail, savedPassword);
+      } catch (e) {
+        Alert.alert('Gagal', e.message);
+      }
     } else {
       Alert.alert('Gagal', 'Biometric tidak cocok.');
     }

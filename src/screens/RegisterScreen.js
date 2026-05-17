@@ -11,9 +11,7 @@ export default function RegisterScreen({ navigation }) {
     try {
       const cred = await createUserWithEmailAndPassword(auth, email, password);
       await sendEmailVerification(cred.user);
-      Alert.alert('Sukses', 'Cek email Anda untuk verifikasi.', [
-        { text: 'OK', onPress: () => navigation.navigate('Login') }
-      ]);
+      Alert.alert('Sukses', 'Cek email Anda untuk verifikasi.');
     } catch (e) {
       Alert.alert('Registrasi Gagal', e.message);
     }

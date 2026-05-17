@@ -17,8 +17,6 @@ export function AuthProvider({ children }) {
       if (u) {
         const token = await u.getIdToken();
         await SecureStore.setItemAsync('auth_token', token);
-      } else {
-        await SecureStore.deleteItemAsync('auth_token');
       }
       setLoading(false);
     });
@@ -27,7 +25,6 @@ export function AuthProvider({ children }) {
 
   const logout = async () => {
     await signOut(auth);
-    await SecureStore.deleteItemAsync('auth_token');
   };
 
   return (
