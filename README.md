@@ -30,10 +30,10 @@ Aplikasi auth sederhana yang mengimplementasikan sistem autentikasi dan otorisas
 ## Screenshot Preview
 
 <p>
-  <img src="assets/login.jpeg" width="250" style="margin-right:10px;"/>
-  <img src="assets/register.jpeg" width="250" style="margin-right:10px;"/>
-  <img src="assets/forget.jpeg" width="250" style="margin-right:10px;"/>
-  <img src="assets/home.jpeg" width="250" style="margin-right:10px;"/>
+  <img src="assets/login.jpeg" width="200" style="margin-right:10px;"/>
+  <img src="assets/register.jpeg" width="200" style="margin-right:10px;"/>
+  <img src="assets/forget.jpeg" width="200" style="margin-right:10px;"/>
+  <img src="assets/home.jpeg" width="200" style="margin-right:10px;"/>
 </p>
 
 ## Video Demo
@@ -47,7 +47,7 @@ Aplikasi ini menggunakan Expo.
 ### 1. Clone Repository
 
 ```bash
-git clone <URL_REPOSITORY>
+git clone https://github.com/Zhofran27/expo-firebase-auth.git
 ```
 
 ### 2. Masuk Ke Folder Project
