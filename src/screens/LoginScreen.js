@@ -73,6 +73,7 @@ export default function LoginScreen({ navigation }) {
     >
       <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
         <View style={styles.headerContainer}>
+          <Text style={styles.emoji}>🌿</Text>
           <Text style={styles.title}>Selamat Datang</Text>
           <Text style={styles.subtitle}>Masuk ke akun Anda</Text>
         </View>
@@ -82,7 +83,7 @@ export default function LoginScreen({ navigation }) {
           <TextInput
             style={styles.input}
             placeholder="nama@email.com"
-            placeholderTextColor="#aaa"
+            placeholderTextColor="#B5E18B"
             value={email}
             onChangeText={setEmail}
             autoCapitalize="none"
@@ -93,7 +94,7 @@ export default function LoginScreen({ navigation }) {
           <TextInput
             style={styles.input}
             placeholder="Masukkan password"
-            placeholderTextColor="#aaa"
+            placeholderTextColor="#B5E18B"
             value={password}
             onChangeText={setPassword}
             secureTextEntry
@@ -127,55 +128,55 @@ export default function LoginScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  flex: { flex: 1, backgroundColor: '#F5F6FA' },
+  flex: { flex: 1, backgroundColor: '#F0FFC2' },
   container: { flexGrow: 1, justifyContent: 'center', padding: 24 },
   headerContainer: { alignItems: 'center', marginBottom: 32 },
-  logo: { fontSize: 56, marginBottom: 12 },
-  title: { fontSize: 28, fontWeight: '800', color: '#1A1A2E', marginBottom: 4 },
-  subtitle: { fontSize: 15, color: '#666' },
+  emoji: { fontSize: 48, marginBottom: 4 },
+  title: { fontSize: 28, fontWeight: '800', color: '#28396C', marginBottom: 4 },
+  subtitle: { fontSize: 15, color: '#28396C', opacity: 0.7 },
   card: {
-    backgroundColor: '#fff',
-    borderRadius: 20,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 24,
     padding: 24,
-    shadowColor: '#000',
+    shadowColor: '#28396C',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.08,
+    shadowOpacity: 0.1,
     shadowRadius: 12,
     elevation: 5,
   },
-  label: { fontSize: 13, fontWeight: '600', color: '#444', marginBottom: 6, marginTop: 12 },
+  label: { fontSize: 13, fontWeight: '600', color: '#28396C', marginBottom: 6, marginTop: 12 },
   input: {
-    backgroundColor: '#F5F6FA',
-    borderRadius: 12,
+    backgroundColor: '#EAE6BC',
+    borderRadius: 14,
     paddingHorizontal: 16,
     paddingVertical: 14,
     fontSize: 15,
-    color: '#1A1A2E',
+    color: '#28396C',
     borderWidth: 1,
-    borderColor: '#E8E8E8',
+    borderColor: '#B5E18B',
   },
   forgotBtn: { alignSelf: 'flex-end', marginTop: 8 },
-  forgotText: { fontSize: 13, color: '#6C63FF', fontWeight: '600' },
+  forgotText: { fontSize: 13, color: '#28396C', fontWeight: '600' },
   btn: {
-    backgroundColor: '#6C63FF',
-    borderRadius: 12,
+    backgroundColor: '#28396C',
+    borderRadius: 14,
     paddingVertical: 16,
     alignItems: 'center',
     marginTop: 20,
   },
-  btnText: { color: '#fff', fontSize: 16, fontWeight: '700' },
+  btnText: { color: '#FFFFFF', fontSize: 16, fontWeight: '700' },
   biometricBtn: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
     marginTop: 12,
     paddingVertical: 14,
-    borderRadius: 12,
+    borderRadius: 14,
     borderWidth: 1.5,
-    borderColor: '#6C63FF',
+    borderColor: '#28396C',
   },
-  biometricText: { color: '#6C63FF', fontSize: 15, fontWeight: '600' },
+  biometricText: { color: '#28396C', fontSize: 15, fontWeight: '600' },
   footer: { flexDirection: 'row', justifyContent: 'center', marginTop: 28 },
-  footerText: { color: '#666', fontSize: 14 },
-  linkText: { color: '#6C63FF', fontSize: 14, fontWeight: '700' },
+  footerText: { color: '#28396C', fontSize: 14, opacity: 0.7 },
+  linkText: { color: '#28396C', fontSize: 14, fontWeight: '700' },
 });

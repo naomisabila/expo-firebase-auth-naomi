@@ -30,6 +30,7 @@ export default function ForgotPasswordScreen({ navigation }) {
       behavior={Platform.OS === 'ios' ? 'padding' : undefined}
     >
       <View style={styles.container}>
+        <Text style={styles.emoji}>🔑</Text>
         <Text style={styles.title}>Lupa Password?</Text>
         <Text style={styles.subtitle}>
           Masukkan email Anda, kami akan kirimkan link reset password.
@@ -40,7 +41,7 @@ export default function ForgotPasswordScreen({ navigation }) {
           <TextInput
             style={styles.input}
             placeholder="nama@email.com"
-            placeholderTextColor="#aaa"
+            placeholderTextColor="#B5E18B"
             value={email}
             onChangeText={setEmail}
             autoCapitalize="none"
@@ -61,40 +62,40 @@ export default function ForgotPasswordScreen({ navigation }) {
 }
 
 const styles = StyleSheet.create({
-  flex: { flex: 1, backgroundColor: '#F5F6FA' },
+  flex: { flex: 1, backgroundColor: '#F0FFC2' },
   container: { flex: 1, justifyContent: 'center', padding: 24 },
-  emoji: { fontSize: 56, textAlign: 'center', marginBottom: 12 },
-  title: { fontSize: 26, fontWeight: '800', color: '#1A1A2E', textAlign: 'center', marginBottom: 8 },
-  subtitle: { fontSize: 14, color: '#666', textAlign: 'center', lineHeight: 21, marginBottom: 28 },
+  emoji: { fontSize: 48, textAlign: 'center', marginBottom: 8 },
+  title: { fontSize: 26, fontWeight: '800', color: '#28396C', textAlign: 'center', marginBottom: 8 },
+  subtitle: { fontSize: 14, color: '#28396C', textAlign: 'center', lineHeight: 21, marginBottom: 28, opacity: 0.7 },
   card: {
-    backgroundColor: '#fff',
-    borderRadius: 20,
+    backgroundColor: '#FFFFFF',
+    borderRadius: 24,
     padding: 24,
-    shadowColor: '#000',
+    shadowColor: '#28396C',
     shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.08,
+    shadowOpacity: 0.1,
     shadowRadius: 12,
     elevation: 5,
     marginBottom: 24,
   },
-  label: { fontSize: 13, fontWeight: '600', color: '#444', marginBottom: 6 },
+  label: { fontSize: 13, fontWeight: '600', color: '#28396C', marginBottom: 6 },
   input: {
-    backgroundColor: '#F5F6FA',
-    borderRadius: 12,
+    backgroundColor: '#EAE6BC',
+    borderRadius: 14,
     paddingHorizontal: 16,
     paddingVertical: 14,
     fontSize: 15,
-    color: '#1A1A2E',
+    color: '#28396C',
     borderWidth: 1,
-    borderColor: '#E8E8E8',
+    borderColor: '#B5E18B',
   },
   btn: {
-    backgroundColor: '#6C63FF',
-    borderRadius: 12,
+    backgroundColor: '#28396C',
+    borderRadius: 14,
     paddingVertical: 16,
     alignItems: 'center',
     marginTop: 20,
   },
-  btnText: { color: '#fff', fontSize: 16, fontWeight: '700' },
-  backText: { color: '#6C63FF', fontSize: 14, fontWeight: '600', textAlign: 'center' },
+  btnText: { color: '#FFFFFF', fontSize: 16, fontWeight: '700' },
+  backText: { color: '#28396C', fontSize: 14, fontWeight: '600', textAlign: 'center' },
 });

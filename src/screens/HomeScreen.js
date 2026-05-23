@@ -20,6 +20,7 @@ export default function HomeScreen() {
 
   return (
     <View style={styles.container}>
+      <Text style={styles.emoji}>🏡</Text>
       <Text style={styles.title}>Selamat Datang!</Text>
       <Text style={styles.email}>{user?.email}</Text>
 
@@ -31,17 +32,17 @@ export default function HomeScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: '#F5F6FA', justifyContent: 'center', alignItems: 'center', padding: 24 },
-  emoji: { fontSize: 64, marginBottom: 16 },
-  title: { fontSize: 26, fontWeight: '800', color: '#1A1A2E', marginBottom: 8 },
-  email: { fontSize: 15, color: '#666', marginBottom: 40 },
+  container: { flex: 1, backgroundColor: '#F0FFC2', justifyContent: 'center', alignItems: 'center', padding: 24 },
+  emoji: { fontSize: 56, marginBottom: 12 },
+  title: { fontSize: 26, fontWeight: '800', color: '#28396C', marginBottom: 8 },
+  email: { fontSize: 15, color: '#28396C', marginBottom: 40, opacity: 0.7 },
   logoutBtn: {
-    backgroundColor: '#FDECEA',
-    borderRadius: 12,
+    backgroundColor: '#B5E18B',
+    borderRadius: 14,
     paddingVertical: 14,
     paddingHorizontal: 40,
     borderWidth: 1.5,
-    borderColor: '#E74C3C',
+    borderColor: '#28396C',
   },
-  logoutBtnText: { color: '#E74C3C', fontSize: 15, fontWeight: '700' },
+  logoutBtnText: { color: '#28396C', fontSize: 15, fontWeight: '700' },
 });
