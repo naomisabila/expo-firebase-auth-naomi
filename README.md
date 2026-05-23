@@ -2,8 +2,8 @@
 
 ## Informasi Mahasiswa
 
-- **Nama**  : Muhammad Zhofran
-- **NIM**   : 2410501068
+- **Nama**  : Naomi Sabila Imani
+- **NIM**   : 2410501061
 - **Kelas** : A
 
 ## Deskripsi
@@ -30,10 +30,10 @@ Aplikasi auth sederhana yang mengimplementasikan sistem autentikasi dan otorisas
 ## Screenshot Preview
 
 <p>
-  <img src="assets/login.jpeg" width="200" style="margin-right:10px;"/>
-  <img src="assets/register.jpeg" width="200" style="margin-right:10px;"/>
-  <img src="assets/forget.jpeg" width="200" style="margin-right:10px;"/>
-  <img src="assets/home.jpeg" width="200" style="margin-right:10px;"/>
+  <img src="assets/login.jpg" width="200" style="margin-right:10px;"/>
+  <img src="assets/register.jpg" width="200" style="margin-right:10px;"/>
+  <img src="assets/forget.jpg" width="200" style="margin-right:10px;"/>
+  <img src="assets/home.jpg" width="200" style="margin-right:10px;"/>
 </p>
 
 ## Video Demo
