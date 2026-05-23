@@ -38,7 +38,7 @@ Aplikasi auth sederhana yang mengimplementasikan sistem autentikasi dan otorisas
 
 ## Video Demo
 
-Link demo aplikasi YouTube: __[Klik untuk menonton video demo Youtube](https://youtu.be/7uJVHQn2PUc)__
+Link demo aplikasi: https://drive.google.com/file/d/1Q8BVPTubDLc0ZhdnPWFUff3ayvIXWcKI/view?usp=drivesdk
 
 ## Cara Menjalankan
 
@@ -47,7 +47,7 @@ Aplikasi ini menggunakan Expo.
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/Zhofran27/expo-firebase-auth.git
+git clone https://github.com/naomisabila/expo-firebase-auth-naomi.git
 ```
 
 ### 2. Masuk Ke Folder Project
